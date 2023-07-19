@@ -4,8 +4,9 @@
   {%- endfor -%}
 </div>
 {{ 'slick.css' | asset_url | stylesheet_tag }}
-<script src="{{ 'jquery-3.7.0'  | asset_url }}" defer="defer"></script>
+<script src="{{ 'jquery-3.7.0.js'  | asset_url }}" defer="defer"></script>
 <script src="{{ 'slick.min.js'  | asset_url }}" defer="defer"></script>
+
 {% schema %}
   {
     "name": "Slider Products",
@@ -22,7 +23,14 @@
     "blocks": [
       {
         "type": "product",
-        "name": "Proposal product"
+        "name": "Proposal product",
+        "settings": [
+          {
+            "type": "product",
+            "id": "proposal_product",
+            "label": "Our Proposal Product"
+          }
+        ]
       }
     ],
     "presets": [

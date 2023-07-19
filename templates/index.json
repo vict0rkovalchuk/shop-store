@@ -66,10 +66,27 @@
         "padding_top": 44,
         "padding_bottom": 36
       }
+    },
+    "d533ae59-4e5c-4e40-aee0-325a7eb2ebde": {
+      "type": "section-slider-products",
+      "blocks": {
+        "486569a1-a1b5-4c31-9c79-6f7bd0ebd5fd": {
+          "type": "product",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "486569a1-a1b5-4c31-9c79-6f7bd0ebd5fd"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
     "image_banner",
-    "featured_collection"
+    "featured_collection",
+    "d533ae59-4e5c-4e40-aee0-325a7eb2ebde"
   ]
 }
