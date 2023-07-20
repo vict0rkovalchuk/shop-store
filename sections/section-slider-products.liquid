@@ -27,7 +27,7 @@
 <script src="{{ 'slick.min.js'  | asset_url }}" defer="defer"></script>
 <script>
   document.addEventListener("DOMContentLoaded", function(event) {
-    $(`#shopify-section-{{section.id}} .slider-product-proposal__slider-list`).slick();
+    $(`#shopify-section-{{section.id}} .slider-product-proposal__slider-list`).slick({infinite: true, slidesToShow: {{section.settings.slider_items}}, slidesToScroll: 2});
   });
 </script>
 {% schema %}
@@ -35,7 +35,17 @@
     "name": "Slider Products",
     "tag": "section",
     "class": "section",
-    "settings": [],
+    "settings": [
+      {
+        "type": "range",
+        "id": "slider_items",
+        "min": 1,
+        "max": 5,
+        "step": 1,
+        "label": "Slides to show",
+        "default": 2
+      }
+    ],
     "blocks": [
       {
         "type": "product",

@@ -1,5 +1,49 @@
 {
   "sections": {
+    "d533ae59-4e5c-4e40-aee0-325a7eb2ebde": {
+      "type": "section-slider-products",
+      "blocks": {
+        "486569a1-a1b5-4c31-9c79-6f7bd0ebd5fd": {
+          "type": "product",
+          "settings": {
+            "proposal_product": "кросівки-avryn"
+          }
+        },
+        "af100e75-fdaa-4545-813d-8d1a2b3fdc65": {
+          "type": "product",
+          "settings": {
+            "proposal_product": "кросівки-continental-80"
+          }
+        },
+        "40e8e799-349c-4daf-81dc-823b866b356d": {
+          "type": "product",
+          "settings": {
+            "proposal_product": "кросівки-forum-low"
+          }
+        },
+        "1f0874b1-5f24-442c-83a9-f4a589d0660a": {
+          "type": "product",
+          "settings": {
+            "proposal_product": "кросівки-ozweego"
+          }
+        },
+        "9cec1431-04d8-4040-a182-812c4be47ff4": {
+          "type": "product",
+          "settings": {
+            "proposal_product": "кросівки-samba-super"
+          }
+        }
+      },
+      "block_order": [
+        "486569a1-a1b5-4c31-9c79-6f7bd0ebd5fd",
+        "af100e75-fdaa-4545-813d-8d1a2b3fdc65",
+        "40e8e799-349c-4daf-81dc-823b866b356d",
+        "1f0874b1-5f24-442c-83a9-f4a589d0660a",
+        "9cec1431-04d8-4040-a182-812c4be47ff4"
+      ],
+      "settings": {
+      }
+    },
     "image_banner": {
       "type": "image-banner",
       "blocks": {
@@ -66,56 +110,11 @@
         "padding_top": 44,
         "padding_bottom": 36
       }
-    },
-    "d533ae59-4e5c-4e40-aee0-325a7eb2ebde": {
-      "type": "section-slider-products",
-      "blocks": {
-        "486569a1-a1b5-4c31-9c79-6f7bd0ebd5fd": {
-          "type": "product",
-          "settings": {
-            "proposal_product": "кросівки-avryn"
-          }
-        },
-        "af100e75-fdaa-4545-813d-8d1a2b3fdc65": {
-          "type": "product",
-          "settings": {
-            "proposal_product": "кросівки-continental-80"
-          }
-        },
-        "40e8e799-349c-4daf-81dc-823b866b356d": {
-          "type": "product",
-          "settings": {
-            "proposal_product": "кросівки-forum-low"
-          }
-        },
-        "1f0874b1-5f24-442c-83a9-f4a589d0660a": {
-          "type": "product",
-          "settings": {
-            "proposal_product": "кросівки-ozweego"
-          }
-        },
-        "9cec1431-04d8-4040-a182-812c4be47ff4": {
-          "type": "product",
-          "settings": {
-            "proposal_product": "кросівки-samba-super"
-          }
-        }
-      },
-      "block_order": [
-        "486569a1-a1b5-4c31-9c79-6f7bd0ebd5fd",
-        "af100e75-fdaa-4545-813d-8d1a2b3fdc65",
-        "40e8e799-349c-4daf-81dc-823b866b356d",
-        "1f0874b1-5f24-442c-83a9-f4a589d0660a",
-        "9cec1431-04d8-4040-a182-812c4be47ff4"
-      ],
-      "settings": {
-        "include_margins": true
-      }
     }
   },
   "order": [
+    "d533ae59-4e5c-4e40-aee0-325a7eb2ebde",
     "image_banner",
-    "featured_collection",
-    "d533ae59-4e5c-4e40-aee0-325a7eb2ebde"
+    "featured_collection"
   ]
 }
