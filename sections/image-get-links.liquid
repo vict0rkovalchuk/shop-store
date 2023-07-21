@@ -27,6 +27,19 @@
     </div>
     <div id="get_image_v_4" style="padding: 5px; margin: 5px; border: 1px solid black">
       <h2>get_image_v_4 - from shopify files</h2>
+      <img src="https://cdn.shopify.com/s/files/1/0790/1521/5400/files/image-leopard-files.jpg?v=1689962279" alt="leopard from files">
+      <img src="{{'image-leopard-files.jpg' | file_img_url}}" alt="leopard pattern">
+    </div>
+    <div id="get_image_v_5" style="padding: 5px; margin: 5px; border: 1px solid black">
+      <h2>get_image_v_5 - assets svg</h2>
+      <img src="{{'shopify-icon.svg' | asset_url}}" alt="shopify logo">
+      <br>
+      {{ 'shopify-icon.svg' | asset_url | img_tag }}
+    </div>
+    <div id="get_image_v_6" style="padding: 5px; margin: 5px; border: 1px solid black">
+      <h2>get_image_v_6 - snippets</h2>
+      {% render 'icon-shopify-snippets' %}
+      {% include 'icon-shopify-snippets' %}
     </div>
   {% endif %}
 </div>
