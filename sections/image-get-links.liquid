@@ -1,5 +1,34 @@
 <div class="page-width">
-  dfvd
+  {% if section.settings.get_image_v_1 != blank %}
+    <div id="get_image_v_1" style="padding: 5px; margin: 5px; border: 1px solid black">
+      <h2>get_image_v_1</h2>
+      <div style="border: 1px solid blue">section.settings.get_image_v_1 == {{ section.settings.get_image_v_1 }}
+        <br>
+        section.settings.get_image_v_1 | img_url: 'icon' == {{ section.settings.get_image_v_1 | img_url: 'icon' }}
+        <br>
+        section.settings.get_image_v_1 | img_url: '33px' | img_tag == {{ section.settings.get_image_v_1 | img_url: '33x' | img_tag }}
+      </div>
+      <div style="border: 1px solid green">
+        <img src="{{section.settings.get_image_v_1 | img_url: 'icon'}}" alt="{{section.settings.get_image_v_1.alt}}">
+        <br>
+        <img src="{{section.settings.get_image_v_1 | img_url: '500'}}" alt="{{section.settings.get_image_v_1.alt}}">
+        <br>
+        <img src="{{section.settings.get_image_v_1 | img_url: 'large'}}" alt="{{section.settings.get_image_v_1.alt}}">
+        <br>
+        {{ section.settings.get_image_v_1 | image_url: width: 500 | image_tag: class: 'custom-class', loading: 'lazy' }}
+      </div>
+    </div>
+    <div id="get_image_v_2" style="padding: 5px; margin: 5px; border: 1px solid black">
+      <h2>get_image_v_2</h2>
+    </div>
+    <div id="get_image_v_3" style="padding: 5px; margin: 5px; border: 1px solid black">
+      <h2>get_image_v_3 - assets</h2>
+      <img src="{{'image-leopard-assets.jpg' | asset_img_url}}" alt="leopard pattern">
+    </div>
+    <div id="get_image_v_4" style="padding: 5px; margin: 5px; border: 1px solid black">
+      <h2>get_image_v_4 - from shopify files</h2>
+    </div>
+  {% endif %}
 </div>
 
 {% schema %}
@@ -12,6 +41,10 @@
         "type": "image_picker",
         "id": "get_image_v_1",
         "label": "Get Image V1"
+      }, {
+        "type": "image_picker",
+        "id": "get_image_v_2",
+        "label": "Image picker without image"
       }
     ],
     "presets": [
