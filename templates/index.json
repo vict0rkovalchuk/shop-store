@@ -1,5 +1,10 @@
 {
   "sections": {
+    "1bf5bd32-cdd3-4e18-b29e-1aa2a8517044": {
+      "type": "image-get-links",
+      "settings": {
+      }
+    },
     "d533ae59-4e5c-4e40-aee0-325a7eb2ebde": {
       "type": "section-slider-products",
       "blocks": {
@@ -42,7 +47,8 @@
         "9cec1431-04d8-4040-a182-812c4be47ff4"
       ],
       "settings": {
-        "slider_items": 3
+        "slider_items": 3,
+        "slider_items_tab": 2
       }
     },
     "db706bc9-9be6-4a50-be88-92506091dee8": {
@@ -94,7 +100,8 @@
         "8936149a-ac7e-40dc-9253-9e11afa425e5"
       ],
       "settings": {
-        "slider_items": 2
+        "slider_items": 2,
+        "slider_items_tab": 2
       }
     },
     "image_banner": {
@@ -166,6 +173,7 @@
     }
   },
   "order": [
+    "1bf5bd32-cdd3-4e18-b29e-1aa2a8517044",
     "d533ae59-4e5c-4e40-aee0-325a7eb2ebde",
     "db706bc9-9be6-4a50-be88-92506091dee8",
     "image_banner",
