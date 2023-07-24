@@ -1,9 +1,42 @@
+{% if section.settings.collection != blank %}
+  {% assign collection = section.settings.collection %}
+  <h2>{{ collection.title }}</h2>
+  <div style="border: 1px solid green; padding: 5px">
+    {% for product in collection.products %}
+      <div style="border: 1px solid brown; padding: 5px">
+        <h3>{{ product.title }}</h3>
+        {% if product.variants.size > 0 %}
+          <div>
+            {% for variant in product.variants %}
+              <h4>{{ variant.title }}</h4>
+              <ul>
+                {% for option in variant.options %}
+                  <li>{{ option }}</li>
+                {% endfor %}
+              </ul>
+            {% endfor %}
+          </div>
+        {% else %}
+          None
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+{% endif %}
+
 {% schema %}
   {
     "name": "Product Object",
     "tag": "section",
     "class": "section",
-    "settings": [],
+    "settings": [
+      {
+        "type": "collection",
+        "id": "collection",
+        "label": "Collection",
+        "default": "with-sale"
+      }
+    ],
     "presets": [
       {
         "name": "Product Object"
