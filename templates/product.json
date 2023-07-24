@@ -1,5 +1,10 @@
 {
   "sections": {
+    "1373f6fa-c1b2-45b2-96fd-2aec48615c18": {
+      "type": "product-object",
+      "settings": {
+      }
+    },
     "main": {
       "type": "main-product",
       "blocks": {
@@ -95,6 +100,7 @@
     }
   },
   "order": [
+    "1373f6fa-c1b2-45b2-96fd-2aec48615c18",
     "main",
     "related-products"
   ]
