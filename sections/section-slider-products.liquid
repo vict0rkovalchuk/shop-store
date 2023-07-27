@@ -27,6 +27,14 @@
                   <div class="slider-item__price">
                     {{ product.price | money_without_trailing_zeros }}
                   </div>
+                  <div class="slider-item__buttons">
+                    <button class="button button--primary" data-ajax-add="{{product.selected_or_first_available_variant.id}}">
+                      Add With AJAX
+                    </button>
+                    <button class="button button--primary">
+                      Add With Dawn
+                    </button>
+                  </div>
                 {% endif %}
               </div>
             {% endif %}
@@ -64,6 +72,37 @@
         }
       ]
     });
+    $(`#shopify-section-{{section.id}}`).on('click', '[data-ajax-add]', function(e) {
+      const itemId = e.target.getAttribute('data-ajax-add')
+
+// отправляем пост запрос на изменение количества товара
+      $.ajax({
+        type: 'POST',
+        url: '/cart/add.js',
+        dataType: 'json',
+        data: { // Если 0 - удаляет. если 1 и больше - меняет на заданную цифру
+          quantity: 1,
+
+// itemId - должно быть всегда  type number
+          id: itemId
+        },
+
+// Если запрос отправился удачно
+        success: function(data) {
+          console.log(data)
+
+// Отправляем запрос на получение объекта корзины с сервера
+          $.ajax({
+            type: 'GET', dataType: 'jsonp', url: '/cart.json',
+
+// Если удачно
+            success: function(cart) {
+              console.log(cart)
+            }
+          })
+        }
+      })
+    })
   });
 </script>
 {% schema %}

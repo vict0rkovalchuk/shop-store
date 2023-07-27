@@ -1,11 +1,5 @@
 {
   "sections": {
-    "1bf5bd32-cdd3-4e18-b29e-1aa2a8517044": {
-      "type": "image-get-links",
-      "settings": {
-        "get_image_v_1": "shopify:\/\/shop_images\/people-looking-at-light-beams-from-the-walls.jpg"
-      }
-    },
     "d533ae59-4e5c-4e40-aee0-325a7eb2ebde": {
       "type": "section-slider-products",
       "blocks": {
@@ -105,6 +99,12 @@
         "slider_items_tab": 2
       }
     },
+    "1bf5bd32-cdd3-4e18-b29e-1aa2a8517044": {
+      "type": "image-get-links",
+      "settings": {
+        "get_image_v_1": "shopify:\/\/shop_images\/people-looking-at-light-beams-from-the-walls.jpg"
+      }
+    },
     "image_banner": {
       "type": "image-banner",
       "blocks": {
@@ -174,9 +174,9 @@
     }
   },
   "order": [
-    "1bf5bd32-cdd3-4e18-b29e-1aa2a8517044",
     "d533ae59-4e5c-4e40-aee0-325a7eb2ebde",
     "db706bc9-9be6-4a50-be88-92506091dee8",
+    "1bf5bd32-cdd3-4e18-b29e-1aa2a8517044",
     "image_banner",
     "featured_collection"
   ]
