@@ -21,6 +21,11 @@
         "id": "facebook_id",
         "label": "Facebook Id",
         "default": "meta_shpoify_02052003"
+      },
+      {
+        "type": "html",
+        "id": "another_script",
+        "label": "Another Script"
       }
     ]
   },
