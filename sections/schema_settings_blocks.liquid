@@ -1,4 +1,17 @@
-<div style="border: 1px solid orange"></div>
+{% if settings.enable_marketing == true %}
+  <div style="border: 1px solid orange">
+    {% if settings.facebook_id != blank %}
+      <script>
+        console.log('facebook_id', '{{settings.facebook_id}}')
+      </script>
+    {% endif %}
+    {% if settings.another_script != blank %}
+      <script>
+        console.log('another_script', '{{settings.another_script}}')
+      </script>
+    {% endif %}
+  </div>
+{% endif %}
 
 {% schema %}
   {
