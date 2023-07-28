@@ -1,5 +1,10 @@
 {
   "sections": {
+    "49ba3d0f-7ac8-49b3-aca2-b08fd48ade3e": {
+      "type": "schema_settings_blocks",
+      "settings": {
+      }
+    },
     "d533ae59-4e5c-4e40-aee0-325a7eb2ebde": {
       "type": "section-slider-products",
       "blocks": {
@@ -174,6 +179,7 @@
     }
   },
   "order": [
+    "49ba3d0f-7ac8-49b3-aca2-b08fd48ade3e",
     "d533ae59-4e5c-4e40-aee0-325a7eb2ebde",
     "db706bc9-9be6-4a50-be88-92506091dee8",
     "1bf5bd32-cdd3-4e18-b29e-1aa2a8517044",
