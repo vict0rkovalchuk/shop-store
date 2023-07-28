@@ -1,8 +1,35 @@
 {
   "sections": {
-    "49ba3d0f-7ac8-49b3-aca2-b08fd48ade3e": {
+    "5919b9f2-1155-4778-8d26-0f8020b9fa65": {
       "type": "schema_settings_blocks",
+      "blocks": {
+        "template--19886254260520__5919b9f2-1155-4778-8d26-0f8020b9fa65-benefit-1": {
+          "type": "benefit",
+          "settings": {
+            "title": "Free Shipping"
+          }
+        },
+        "template--19886254260520__5919b9f2-1155-4778-8d26-0f8020b9fa65-benefit-2": {
+          "type": "benefit",
+          "settings": {
+            "title": "Colors"
+          }
+        },
+        "3f2d789c-94b4-4547-a9e7-e2dbf58f2e4b": {
+          "type": "offer",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/people-looking-at-light-beams-from-the-walls.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "template--19886254260520__5919b9f2-1155-4778-8d26-0f8020b9fa65-benefit-1",
+        "template--19886254260520__5919b9f2-1155-4778-8d26-0f8020b9fa65-benefit-2",
+        "3f2d789c-94b4-4547-a9e7-e2dbf58f2e4b"
+      ],
       "settings": {
+        "title": "Benefits",
+        "description": "<p>Description<\/p>"
       }
     },
     "d533ae59-4e5c-4e40-aee0-325a7eb2ebde": {
@@ -179,7 +206,7 @@
     }
   },
   "order": [
-    "49ba3d0f-7ac8-49b3-aca2-b08fd48ade3e",
+    "5919b9f2-1155-4778-8d26-0f8020b9fa65",
     "d533ae59-4e5c-4e40-aee0-325a7eb2ebde",
     "db706bc9-9be6-4a50-be88-92506091dee8",
     "1bf5bd32-cdd3-4e18-b29e-1aa2a8517044",

@@ -11,14 +11,121 @@
   </div>
 {% endif %}
 
+<div class="schema_settings_blocks__section">
+  {% if section.settings.title != blank %}
+    <h2>
+      {{ section.settings.title }}
+    </h2>
+  {% endif %}
+  {% if section.settings.description != blank %}
+    <div>{{ section.settings.description }}</div>
+  {% endif %}
+  {% if section.blocks.size > 0 %}
+    <ul>
+      {% for block in section.blocks %}
+        {% if block.settings.title != blank and block.type == 'benefit' %}
+          <li>
+            {{ block.type }} == {{ block.settings.title }}
+            <ul>
+              {% for i in (1..4) %}
+                {% assign count_name = "benefit_" | append: i %}
+                {% assign benefit_title = block.settings[count_name] %}
+                <li>{{ benefit_title }}</li>
+              {% endfor %}
+            </ul>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+    <div>
+      {% for block in section.blocks %}
+        {% if block.settings.image != blank and block.type == 'offer' %}
+          <img src="{{block.settings.image | img_url: 'small'}}" alt="{{block.settings.image.alt | default: section.settings.title }}">
+        {% endif %}
+      {% endfor %}
+    </div>
+  {% endif %}
+</div>
+
+
 {% schema %}
   {
     "name": "Schema section blocks",
     "tag": "section",
-    "class": "section",
+    "class": "section schema_settings_blocks",
+    "limit": 1,
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Section Title"
+      }, {
+        "type": "richtext",
+        "id": "description",
+        "label": "Section Description",
+        "default": "<p>Description</p>"
+      }
+    ],
+    "max_blocks": 5,
+    "blocks": [
+      {
+        "name": "Benefit",
+        "type": "benefit",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Benefit Title"
+          },
+          {
+            "type": "text",
+            "id": "benefit_1",
+            "label": "Benefit 1",
+            "default": "benefit text 1"
+          },
+          {
+            "type": "text",
+            "id": "benefit_2",
+            "label": "Benefit 2",
+            "default": "benefit text 2"
+          },
+          {
+            "type": "text",
+            "id": "benefit_3",
+            "label": "Benefit 3",
+            "default": "benefit text 3"
+          }, {
+            "type": "text",
+            "id": "benefit_4",
+            "label": "Benefit 4",
+            "default": "benefit text 4"
+          }
+        ]
+      }, {
+        "name": "Offer",
+        "type": "offer",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Offer Image"
+          }
+        ]
+      }
+    ],
     "presets": [
       {
-        "name": "Schema section blocks"
+        "name": "Schema section blocks",
+        "settings": {
+          "title": "Benefits"
+        },
+        "blocks": [
+          {
+            "type": "benefit"
+          }, {
+            "type": "benefit"
+          }
+        ]
       }
     ]
   }
