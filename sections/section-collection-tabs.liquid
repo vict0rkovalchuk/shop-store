@@ -1,0 +1,83 @@
+{% if settings.enable_marketing == true %}
+  <div style="border: 1px solid orange">
+    {% if settings.facebook_id != blank %}
+      <script>
+        console.log('facebook_id', '{{settings.facebook_id}}')
+      </script>
+    {% endif %}
+    {% if settings.another_script != blank %}
+      {{ settings.another_script }}
+    {% endif %}
+  </div>
+{% endif %}
+
+<div class="schema_settings_blocks__section">
+  {% if section.settings.title != blank %}
+    <h2>
+      {{ section.settings.title }}
+    </h2>
+  {% endif %}
+  {% if section.settings.description != blank %}
+    <div>{{ section.settings.description }}</div>
+  {% endif %}
+  {% if section.blocks.size > 0 %}
+    <ul>
+      {% for block in section.blocks %}
+        {% if block.settings.title != blank and block.type == 'benefit' %}
+          <li>
+            {{ block.type }} == {{ block.settings.title }}
+            <ul>
+              {% for i in (1..4) %}
+                {% assign count_name = "benefit_" | append: i %}
+                {% assign benefit_title = block.settings[count_name] %}
+                <li>{{ benefit_title }}</li>
+              {% endfor %}
+            </ul>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+    <div>
+      {% for block in section.blocks %}
+        {% if block.settings.image != blank and block.type == 'offer' %}
+          <img src="{{block.settings.image | img_url: 'small'}}" alt="{{block.settings.image.alt | default: section.settings.title }}">
+        {% endif %}
+      {% endfor %}
+    </div>
+  {% endif %}
+</div>
+
+
+{% schema %}
+  {
+    "name": "Schema section blocks",
+    "tag": "section",
+    "class": "section section-collection-tabs",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Section Title",
+        "default": "<p>Favourite products</p>"
+      }, {
+        "type": "richtext",
+        "id": "description",
+        "label": "Section Description",
+        "default": "<p>Chose</p>"
+      }
+    ],
+    "max_blocks": 4,
+    "blocks": [
+      {
+        "name": "Collction tab",
+        "type": "collection_tab",
+        "settings": []
+      }
+    ],
+    "presets": [
+      {
+        "name": "Collection tabs"
+      }
+    ]
+  }
+{% endschema %}
