@@ -16,22 +16,53 @@
           <div class="section-collection-tabs__tab-head tab__headings">
 
             <ul class="section-collection-tabs__tab-list list">
+              {% assign first_tab = true %}
+
               {% for block in section.blocks %}
-                {% if block.settings.collection != blank %}
-                  <li class="list__item active">
-                    <a href="#" class="list__link">{{ block.settings.alternative_title | default: block.settings.collection.title }}</a>
-                  </li>
+                {% assign collection_tab = block.settings.collection %}
+                {% if collection_tab != blank %}
+
+                  {% if collection_tab.all_products_count > 0 %}
+                    <li
+                      class="list__item {% if first_tab == true %}active{% endif %}">
+                      <a href="#" class="list__link">{{ block.settings.alternative_title | default: collection_tab.title }}</a>
+                    </li>
+
+                    {% if first_tab == true %}
+                      {% assign first_tab = false %}
+                    {% endif %}
+                  {% endif %}
+
                 {% endif %}
               {% endfor %}
             </ul>
           </div>
           <div class="section-collection-tabs__tab-body tab__body">
             <ul class="list">
+              {% assign first_tab = true %}
               {% for block in section.blocks %}
-                {% if block.settings.collection != blank %}
-                  <li class="list__item active">
-                    {{ block.settings.collection.description }}
+                {% assign collection_tab = block.settings.collection %}
+                {% if collection_tab != blank %}
+                  <li class="list__item {% if first_tab == true %}active{% endif %}">
+                    {% if collection_tab.all_products_count > 0 %}
+                      <ul class="grid product-grid contains-card contains-card--product">
+                        {% for tab_product in collection_tab.products %}
+                          <li class="grid__item">
+                            {% render 'card-product'
+                             , card_product: tab_product,
+                             show_secondary_image: false,
+                             show_vendor: false,
+                             show_rating: false,
+                             show_quick_add: true,
+                             section_id: section.id %}
+                          </li>
+                        {% endfor %}
+                      </ul>
+                    {% endif %}
                   </li>
+                  {% if first_tab == true %}
+                    {% assign first_tab = false %}
+                  {% endif %}
                 {% endif %}
               {% endfor %}
             </ul>
