@@ -19,7 +19,7 @@
               {% for block in section.blocks %}
                 {% if block.settings.collection != blank %}
                   <li class="list__item active">
-                    <a href="#" class="list__link">{{ block.settings.collection.title }}</a>
+                    <a href="#" class="list__link">{{ block.settings.alternative_title | default: block.settings.collection.title }}</a>
                   </li>
                 {% endif %}
               {% endfor %}

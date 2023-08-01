@@ -6,19 +6,22 @@
         "d3a411f3-2571-411a-aa00-7c58497f4662": {
           "type": "collection_tab",
           "settings": {
-            "collection": "white-shoes"
+            "collection": "white-shoes",
+            "alternative_title": "For sunny weather"
           }
         },
         "191fd385-c207-4e35-b015-f5032aef3e62": {
           "type": "collection_tab",
           "settings": {
-            "collection": "gray-shoes"
+            "collection": "gray-shoes",
+            "alternative_title": ""
           }
         },
         "cebe2ec9-dc7c-4573-baab-5dc5e08f9051": {
           "type": "collection_tab",
           "settings": {
-            "collection": "black-shoes"
+            "collection": "black-shoes",
+            "alternative_title": "For rain weather"
           }
         }
       },
