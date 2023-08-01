@@ -13,18 +13,6 @@ document.addEventListener('DOMContentLoaded', function (event) {
         .children()
         .children();
 
-      /*Способ 1*/
-      // $(tabHeadList[2]).css('background', 'red')
-
-      /*Способ 2 - .eq()c начала списка*/
-      $(tabHeadList).eq(2).css('background', 'green');
-
-      /*Способ 3 - .eq()c конца списка*/
-      // $(tabHeadList).eq(-1).css('background', 'blue');
-
-      // альтрнативный вариант
-      /*let alternateVariant = parentItem.parents('.tab').find('.list__item');*/
-
       let activateTab = (elements, activeIndex) => {
         for (let item of elements) {
           $(item).removeClass('active');
@@ -36,9 +24,6 @@ document.addEventListener('DOMContentLoaded', function (event) {
       };
       activateTab(tabHeadList, elementActivatePosition);
       activateTab(tabBodyList, elementActivatePosition);
-
-      // альтрнативный вариант
-      /*activateTab(alternateVariant, elementActivatePosition);*/
     };
 
     $(document).on('click', '.list__link', e => toggleTubs(e));

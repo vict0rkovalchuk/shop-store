@@ -2,6 +2,31 @@
   "sections": {
     "2d362d7c-c100-41ef-8019-8568364509c6": {
       "type": "section-collection-tabs",
+      "blocks": {
+        "d3a411f3-2571-411a-aa00-7c58497f4662": {
+          "type": "collection_tab",
+          "settings": {
+            "collection": "white-shoes"
+          }
+        },
+        "191fd385-c207-4e35-b015-f5032aef3e62": {
+          "type": "collection_tab",
+          "settings": {
+            "collection": "gray-shoes"
+          }
+        },
+        "cebe2ec9-dc7c-4573-baab-5dc5e08f9051": {
+          "type": "collection_tab",
+          "settings": {
+            "collection": "black-shoes"
+          }
+        }
+      },
+      "block_order": [
+        "d3a411f3-2571-411a-aa00-7c58497f4662",
+        "191fd385-c207-4e35-b015-f5032aef3e62",
+        "cebe2ec9-dc7c-4573-baab-5dc5e08f9051"
+      ],
       "settings": {
         "title": "<p>Favourite products<\/p>",
         "description": "<p>Chose<\/p>"
