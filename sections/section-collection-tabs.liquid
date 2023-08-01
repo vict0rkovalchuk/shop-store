@@ -1,56 +1,55 @@
-{% if settings.enable_marketing == true %}
-  <div style="border: 1px solid orange">
-    {% if settings.facebook_id != blank %}
-      <script>
-        console.log('facebook_id', '{{settings.facebook_id}}')
-      </script>
-    {% endif %}
-    {% if settings.another_script != blank %}
-      {{ settings.another_script }}
-    {% endif %}
+{% if section.blocks.size > 0 %}
+  {{ 'section-collection-tabs.css' | asset_url | stylesheet_tag }}
+  <div class="section-collection-tabs__section">
+    <div class="page-width section-collection-tabs__container">
+
+      <div class="section-collection-tabs__heading">
+        {% if section.settings.title != blank %}
+          <h2 class="section-collection-tabs__title">{{ section.settings.title }}</h2>
+        {% endif %}
+        {% if section.settings.description != blank %}
+          <div class="section-collection-tabs__title">{{ section.settings.description }}</div>
+        {% endif %}
+      </div>
+      <div class="section-collection-tabs_tabs__content">
+        <div class="tab">
+          <div class="tab__headings">
+            <ul class="list">
+              <li class="list__item active">
+                <a href="#" class="list__link">Description</a>
+              </li>
+              <li class="list__item">
+                <a href="#" class="list__link">Details</a>
+              </li>
+              <li class="list__item">
+                <a href="#" class="list__link">
+                  Сharacteristics</a>
+              </li>
+            </ul>
+          </div>
+          <div class="tab__bodies">
+            <ul class="list">
+              <li class="list__item active">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              </li>
+              <li class="list__item">
+                There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.
+              </li>
+              <li class="list__item">
+                It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
   </div>
 {% endif %}
 
-<div class="schema_settings_blocks__section">
-  {% if section.settings.title != blank %}
-    <h2>
-      {{ section.settings.title }}
-    </h2>
-  {% endif %}
-  {% if section.settings.description != blank %}
-    <div>{{ section.settings.description }}</div>
-  {% endif %}
-  {% if section.blocks.size > 0 %}
-    <ul>
-      {% for block in section.blocks %}
-        {% if block.settings.title != blank and block.type == 'benefit' %}
-          <li>
-            {{ block.type }} == {{ block.settings.title }}
-            <ul>
-              {% for i in (1..4) %}
-                {% assign count_name = "benefit_" | append: i %}
-                {% assign benefit_title = block.settings[count_name] %}
-                <li>{{ benefit_title }}</li>
-              {% endfor %}
-            </ul>
-          </li>
-        {% endif %}
-      {% endfor %}
-    </ul>
-    <div>
-      {% for block in section.blocks %}
-        {% if block.settings.image != blank and block.type == 'offer' %}
-          <img src="{{block.settings.image | img_url: 'small'}}" alt="{{block.settings.image.alt | default: section.settings.title }}">
-        {% endif %}
-      {% endfor %}
-    </div>
-  {% endif %}
-</div>
-
-
 {% schema %}
   {
-    "name": "Schema section blocks",
+    "name": "Collection Tabs",
     "tag": "section",
     "class": "section section-collection-tabs",
     "settings": [
@@ -71,7 +70,13 @@
       {
         "name": "Collction tab",
         "type": "collection_tab",
-        "settings": []
+        "settings": [
+          {
+            "type": "collection",
+            "id": "collection",
+            "label": "Collection"
+          }
+        ]
       }
     ],
     "presets": [

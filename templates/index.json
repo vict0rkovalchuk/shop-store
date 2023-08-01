@@ -1,18 +1,33 @@
 {
   "sections": {
+    "2d362d7c-c100-41ef-8019-8568364509c6": {
+      "type": "section-collection-tabs",
+      "settings": {
+        "title": "<p>Favourite products<\/p>",
+        "description": "<p>Chose<\/p>"
+      }
+    },
     "5919b9f2-1155-4778-8d26-0f8020b9fa65": {
       "type": "schema_settings_blocks",
       "blocks": {
         "template--19886254260520__5919b9f2-1155-4778-8d26-0f8020b9fa65-benefit-1": {
           "type": "benefit",
           "settings": {
-            "title": "Free Shipping"
+            "title": "Free Shipping",
+            "benefit_1": "benefit text 1",
+            "benefit_2": "benefit text 2",
+            "benefit_3": "benefit text 3",
+            "benefit_4": "benefit text 4"
           }
         },
         "template--19886254260520__5919b9f2-1155-4778-8d26-0f8020b9fa65-benefit-2": {
           "type": "benefit",
           "settings": {
-            "title": "Colors"
+            "title": "Colors",
+            "benefit_1": "benefit text 1",
+            "benefit_2": "benefit text 2",
+            "benefit_3": "benefit text 3",
+            "benefit_4": "benefit text 4"
           }
         },
         "3f2d789c-94b4-4547-a9e7-e2dbf58f2e4b": {
@@ -206,6 +221,7 @@
     }
   },
   "order": [
+    "2d362d7c-c100-41ef-8019-8568364509c6",
     "5919b9f2-1155-4778-8d26-0f8020b9fa65",
     "d533ae59-4e5c-4e40-aee0-325a7eb2ebde",
     "db706bc9-9be6-4a50-be88-92506091dee8",
