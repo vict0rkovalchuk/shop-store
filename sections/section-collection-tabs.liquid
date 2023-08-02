@@ -1,3 +1,9 @@
+{{ 'component-card.css' | asset_url | stylesheet_tag }}
+{{ 'component-price.css' | asset_url | stylesheet_tag }}
+{{ 'quick-add.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'quick-add.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
+
 {% if section.blocks.size > 0 %}
   {{ 'section-collection-tabs.css' | asset_url | stylesheet_tag }}
   <div class="section-collection-tabs__section">
@@ -23,8 +29,7 @@
                 {% if collection_tab != blank %}
 
                   {% if collection_tab.all_products_count > 0 %}
-                    <li
-                      class="list__item {% if first_tab == true %}active{% endif %}">
+                    <li class="list__item {% if first_tab == true %}active{% endif %}">
                       <a href="#" class="list__link">{{ block.settings.alternative_title | default: collection_tab.title }}</a>
                     </li>
 
