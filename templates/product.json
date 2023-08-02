@@ -1,5 +1,10 @@
 {
   "sections": {
+    "447701e0-54b9-4862-a0ce-263b97ab6b12": {
+      "type": "product-benefits-metafield",
+      "settings": {
+      }
+    },
     "1373f6fa-c1b2-45b2-96fd-2aec48615c18": {
       "type": "product-object",
       "settings": {
@@ -111,6 +116,7 @@
     }
   },
   "order": [
+    "447701e0-54b9-4862-a0ce-263b97ab6b12",
     "1373f6fa-c1b2-45b2-96fd-2aec48615c18",
     "main",
     "related-products"

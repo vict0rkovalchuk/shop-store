@@ -1,8 +1,10 @@
-<div class="{% if section.settings.include_margins %}page-width{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
-  {%- for block in section.blocks -%}
-    {% render block %}
-  {%- endfor -%}
+<div style="border: 1px solid orange">
+  {{ product.metafields.benefit_section.item_1.value }} <br>
+  {{ product.metafields.benefit_section.item_2.value }} <br>
+  {{ product.metafields.benefit_section.item_3.value }} <br>
+  {{ product.metafields.benefit_section.item_4.value }}
 </div>
+
 
 {% schema %}
   {
