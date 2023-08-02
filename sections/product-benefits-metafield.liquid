@@ -1,0 +1,24 @@
+<div class="{% if section.settings.include_margins %}page-width{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+  {%- for block in section.blocks -%}
+    {% render block %}
+  {%- endfor -%}
+</div>
+
+{% schema %}
+  {
+    "name": "Product BNF Metafield",
+    "tag": "section",
+    "class": "section",
+    "settings": [
+      {
+        "type": "paragraph",
+        "content": "This section uses metafields"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Product Benefits Metafield"
+      }
+    ]
+  }
+{% endschema %}

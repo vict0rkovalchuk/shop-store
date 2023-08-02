@@ -54,6 +54,15 @@
           "settings": {
             "share_label": "Share"
           }
+        },
+        "91f1c72d-1d7b-43a4-9a0f-4a9744816f2a": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Materials",
+            "icon": "leather",
+            "content": "<p>Materials<\/p>",
+            "page": ""
+          }
         }
       },
       "block_order": [
@@ -64,7 +73,8 @@
         "quantity_selector",
         "buy_buttons",
         "description",
-        "share"
+        "share",
+        "91f1c72d-1d7b-43a4-9a0f-4a9744816f2a"
       ],
       "settings": {
         "enable_sticky_info": true,
